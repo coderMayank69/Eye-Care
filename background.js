@@ -3,6 +3,7 @@
 
 const REMINDER_INTERVAL = 20 * 60 * 1000; // 20 minutes in milliseconds
 const ALARM_NAME = 'eye-care-reminder';
+const NOTIFICATION_ICON = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z6b8AAAAASUVORK5CYII=';
 
 // Initialize the extension when it's installed
 chrome.runtime.onInstalled.addListener(() => {
@@ -40,7 +41,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 function showNotification() {
   chrome.notifications.create({
     type: 'basic',
-    iconUrl: 'images/icon-128.png',
+    iconUrl: NOTIFICATION_ICON,
     title: '👀 Eye Care Reminder - 20-20-20 Rule',
     message: 'Look at something 20 feet away for 20 seconds to reduce eye strain and protect your eyes!',
     priority: 1,
