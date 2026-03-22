@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Care 20-20-20</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👀 Eye Care</h1>
+            <p class="subtitle">20-20-20 Rule</p>
+        </div>
+        
+        <div class="rule-info">
+            <p><strong>Every 20 minutes:</strong></p>
+            <ul>
+                <li>Look at something <strong>20 feet away</strong></li>
+                <li>For <strong>20 seconds</strong></li>
+            </ul>
+            <p class="rule-description">This helps reduce eye strain and protects your eye health!</p>
+        </div>
+        
+        <div class="controls">
+            <div class="toggle-section">
+                <label class="toggle-label">
+                    <input type="checkbox" id="reminderToggle" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-text">Enable Reminders</span>
+                </label>
+            </div>
+            
+            <div class="interval-section">
+                <label for="intervalSelect">Reminder Interval:</label>
+                <select id="intervalSelect">
+                    <option value="5">Every 5 minutes (Testing)</option>
+                    <option value="10">Every 10 minutes</option>
+                    <option value="20" selected>Every 20 minutes (Default)</option>
+                    <option value="30">Every 30 minutes</option>
+                    <option value="60">Every 1 hour</option>
+                </select>
+            </div>
+            
+            <div class="status-section">
+                <p id="statusMessage" class="status">🟢 Reminders are active</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="tip">💡 Tip: Take breaks every 20 minutes for healthier eyes!</p>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
